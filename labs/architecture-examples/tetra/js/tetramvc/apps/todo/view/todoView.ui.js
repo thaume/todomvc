@@ -57,8 +57,7 @@ tetra.view.register('todoView', {
 							var target = elm.siblings('.view').find('label').data('id'),
 								value = elm.val();
 
-							elm.val().trim();
-							if ( !elm.val() ) { 
+							if ( !elm.val().trim() ) { 
 								elm.siblings('.view').find('.destroy').trigger('click') 
 							} else {
 								app.notify('update todo', { target: target, value: value });

@@ -23,14 +23,12 @@ tetra.model.register('todo', {
 			getAttr : function(){
 				return attr;
 			},
-
-			create: function(obj) {
-				console.log(this);
-			},
 				
 			//Model mock up methods
 			putTodo: function ( data, app ) {
-				var todos = JSON.parse( localStorage.getItem('todo-tetra') || '[]' ), todo = {};
+				var todos = JSON.parse( localStorage.getItem('todo-tetra') || '[]' ), 
+					todo = {};
+
 				todo = {
 					id: Date.now(),
 					value: data.value
@@ -64,7 +62,6 @@ tetra.model.register('todo', {
 			},
 
 			deleteTodo: function ( data ) {
-				console.log(data);
 				var sortedData = this.getTodo( data );
 				sortedData.todos.splice( sortedData.index, 1);
 				localStorage.setItem( 'todo-tetra', JSON.stringify( sortedData.todos ) );

@@ -31,7 +31,7 @@ tetra.controller.register('todo', {
 
 			methods: {
 				init: function() {
-					console.log("Controller start");
+					//console.log("Controller start");
 				}
 			}
 		};
